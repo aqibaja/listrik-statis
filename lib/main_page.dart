@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:listrik_statis/kuis/first_page.dart';
 import 'package:listrik_statis/video/menu_video.dart';
-import 'package:listrik_statis/video/video1.dart';
 import 'package:listrik_statis/indikator/menuIndikator.dart';
 import 'package:listrik_statis/materi/menu_materi.dart';
 import 'package:listrik_statis/virtual_lab.dart';
@@ -72,7 +70,7 @@ class _MainPageState extends State<MainPage> {
                       isPortrait: isPortrait,
                       image: "assets/image/gambar2.png",
                       title: "Kuis",
-                      url:  QuizHome(),
+                      url: QuizHome(),
                     ),
                   ]),
                   SizedBox(height: 20),

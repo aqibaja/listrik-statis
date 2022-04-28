@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/listrik_statis/BuildConfig.java
+ com.example.listrik_statis.BuildConfig

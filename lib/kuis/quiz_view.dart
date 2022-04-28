@@ -170,126 +170,126 @@ class _QuizViewState extends State<QuizView> {
         ));
 
     return Container(
-        decoration: BoxDecoration(
-            color: widget.backgroundColor,
-            
-            border: Border.all(
-                color: Colors.black, width: 1.5, style: BorderStyle.solid)),
-        width: widget.width,
-        height: widget.height,
-        child: widget.questionTag != null
-            ? Stack(
-                children: [
-                  Positioned(
-                    top: 0,
-                    left: 0,
-                    child: Container(
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          color: widget.tagBackgroundColor,
-                          ),
-                      child: Text(
-                        widget.questionTag!,
-                        style: TextStyle(
-                            color: widget.tagColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: widget.width > widget.height
-                                ? widget.width / 20
-                                : widget.height / 20),
-                      ),
+      decoration: BoxDecoration(
+          color: widget.backgroundColor,
+          border: Border.all(
+              color: Colors.black, width: 1.5, style: BorderStyle.solid)),
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      child: widget.questionTag != null
+          ? Stack(
+              children: [
+                Positioned(
+                  top: 0,
+                  left: 0,
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.blueAccent,
+                    ),
+                    child: Text(
+                      widget.questionTag!,
+                      style: TextStyle(
+                          color: widget.tagColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: widget.width > widget.height
+                              ? widget.width / 20
+                              : widget.height / 20),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(
-                        0,
-                        widget.width > widget.height
-                            ? widget.width / 10
-                            : widget.height / 10,
-                        0,
-                        0),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: widget.image != null
-                            ? [
-                                Container(
-                                  padding: EdgeInsets.all(20),
-                                  child: RichText(
-                                      text: TextSpan(
-                                    text: widget.question,
-                                    style: TextStyle(
-                                        color: widget.questionColor,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: widget.width > widget.height
-                                            ? widget.width / 20
-                                            : widget.height / 20),
-                                  )),
-                                ),
-                                widget.image!,
-                                answerColumn
-                              ]
-                            : [
-                                Container(
-                                  padding: EdgeInsets.all(20),
-                                  child: RichText(
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(
+                      0,
+                      widget.width > widget.height
+                          ? widget.width / 10
+                          : widget.height / 10,
+                      0,
+                      0),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: widget.image != null
+                          ? [
+                              Container(
+                                padding: EdgeInsets.all(20),
+                                child: RichText(
                                     text: TextSpan(
-                                        text: widget.question,
-                                        style: TextStyle(
-                                            color: widget.questionColor,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize:
-                                                widget.width > widget.height
-                                                    ? widget.width / 20
-                                                    : widget.height / 20)),
-                                  ),
-                                ),
-                                answerColumn
-                              ],
-                      ),
-                    ),
-                  ),
-                ],
-              )
-            : SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: widget.image != null
-                      ? [
-                          Container(
-                            padding: EdgeInsets.all(20),
-                            child: RichText(
-                                text: TextSpan(
-                              text: widget.question,
-                              style: TextStyle(
-                                  color: widget.questionColor,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: widget.width > widget.height
-                                      ? widget.width / 20
-                                      : widget.height / 20),
-                            )),
-                          ),
-                          widget.image!,
-                          answerColumn
-                        ]
-                      : [
-                          Container(
-                            padding: EdgeInsets.all(20),
-                            child: RichText(
-                              text: TextSpan(
                                   text: widget.question,
                                   style: TextStyle(
                                       color: widget.questionColor,
                                       fontWeight: FontWeight.bold,
                                       fontSize: widget.width > widget.height
                                           ? widget.width / 20
-                                          : widget.height / 20)),
-                            ),
-                          ),
-                          answerColumn
-                        ],
+                                          : widget.height / 20),
+                                )),
+                              ),
+                              widget.image!,
+                              answerColumn
+                            ]
+                          : [
+                              Container(
+                                padding: EdgeInsets.all(20),
+                                child: RichText(
+                                  text: TextSpan(
+                                      text: widget.question,
+                                      style: TextStyle(
+                                          color: widget.questionColor,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: widget.width > widget.height
+                                              ? widget.width / 20
+                                              : widget.height / 20)),
+                                ),
+                              ),
+                              answerColumn
+                            ],
+                    ),
+                  ),
                 ),
-              ));
+              ],
+            )
+          : SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: widget.image != null
+                    ? [
+                        Container(
+                          padding: EdgeInsets.all(20),
+                          child: RichText(
+                              text: TextSpan(
+                            text: widget.question,
+                            style: TextStyle(
+                                color: widget.questionColor,
+                                fontWeight: FontWeight.bold,
+                                fontSize: widget.width > widget.height
+                                    ? widget.width / 20
+                                    : widget.height / 20),
+                          )),
+                        ),
+                        widget.image!,
+                        answerColumn
+                      ]
+                    : [
+                        Container(
+                          padding: EdgeInsets.all(20),
+                          child: RichText(
+                            text: TextSpan(
+                                text: widget.question,
+                                style: TextStyle(
+                                    color: widget.questionColor,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: widget.width > widget.height
+                                        ? widget.width / 20
+                                        : widget.height / 20)),
+                          ),
+                        ),
+                        answerColumn
+                      ],
+              ),
+            ),
+    );
   }
 }
