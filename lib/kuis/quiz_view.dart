@@ -3,6 +3,8 @@ library quiz_view;
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+import 'package:listrik_statis/main.dart';
+
 class QuizView extends StatefulWidget {
   /// Boolean to show the correct answer after the quiz is answered
   final bool showCorrect;
@@ -52,6 +54,10 @@ class QuizView extends StatefulWidget {
   /// This function is executed if the answer is wrong
   final void Function() onWrongAnswer;
 
+  final void Function() nexTap;
+
+  final void Function() backTap;
+
   QuizView(
       {this.showCorrect = true,
       this.questionTag,
@@ -68,7 +74,9 @@ class QuizView extends StatefulWidget {
       this.answerColor = Colors.black,
       this.answerBackgroundColor = Colors.white,
       required this.onRightAnswer,
-      required this.onWrongAnswer});
+      required this.onWrongAnswer,
+      required this.backTap,
+      required this.nexTap});
 
   _QuizViewState createState() => _QuizViewState();
 }
@@ -93,42 +101,44 @@ class _QuizViewState extends State<QuizView> {
     );
 
     for (String i in widget.wrongAnswers) {
-      answerColumn.children.add(Container(
-        width: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.all(15),
-        child: ElevatedButton(
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.resolveWith(
-                (states) => widget.answerBackgroundColor),
-            padding: MaterialStateProperty.resolveWith(
-                (states) => EdgeInsets.fromLTRB(20, 10, 20, 10)),
-            shape:
-                MaterialStateProperty.resolveWith((states) => StadiumBorder()),
-            textStyle: MaterialStateProperty.resolveWith(
-                (states) => TextStyle(color: Colors.white)),
-          ),
-          child: Center(
-            child: Text(
-              i,
-              style: TextStyle(
-                  color: widget.answerColor,
-                  fontSize: widget.width > widget.height
-                      ? widget.width / 25
-                      : widget.height / 25),
+      answerColumn.children.add(
+        Container(
+          width: MediaQuery.of(context).size.width,
+          padding: EdgeInsets.all(15),
+          child: ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.resolveWith(
+                  (states) => widget.answerBackgroundColor),
+              padding: MaterialStateProperty.resolveWith(
+                  (states) => EdgeInsets.fromLTRB(20, 10, 20, 10)),
+              shape: MaterialStateProperty.resolveWith(
+                  (states) => StadiumBorder()),
+              textStyle: MaterialStateProperty.resolveWith(
+                  (states) => TextStyle(color: Colors.white)),
             ),
-          ),
-          onPressed: () {
-            if (!isTapped) {
-              widget.onWrongAnswer();
-              if (widget.showCorrect) {
-                setState(() {
-                  isTapped = !isTapped;
-                });
+            child: Center(
+              child: Text(
+                i,
+                style: TextStyle(
+                    color: widget.answerColor,
+                    fontSize: widget.width > widget.height
+                        ? widget.width / 25
+                        : widget.height / 25),
+              ),
+            ),
+            onPressed: () {
+              if (!isTapped) {
+                widget.onWrongAnswer();
+                if (widget.showCorrect) {
+                  setState(() {
+                    isTapped = !isTapped;
+                  });
+                }
               }
-            }
-          },
+            },
+          ),
         ),
-      ));
+      );
     }
     answerColumn.children.insert(
         answerIndex,
@@ -168,6 +178,30 @@ class _QuizViewState extends State<QuizView> {
             },
           ),
         ));
+
+    answerColumn.children.add(Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        InkWell(
+          onTap: () => widget.backTap(),
+          child: Container(
+            height: 50,
+            width: 50,
+            color: Colors.blue,
+            child: Text('back'),
+          ),
+        ),
+        InkWell(
+          onTap: () => widget.nexTap(),
+          child: Container(
+            height: 50,
+            width: 50,
+            color: Colors.amber,
+            child: Text('next'),
+          ),
+        )
+      ],
+    ));
 
     return Container(
       decoration: BoxDecoration(
@@ -243,11 +277,25 @@ class _QuizViewState extends State<QuizView> {
                                               : widget.height / 20)),
                                 ),
                               ),
-                              answerColumn
+                              answerColumn,
                             ],
                     ),
                   ),
                 ),
+                isTapped == true
+                    ? Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 20),
+                          child: Container(
+                            child: Text('Lihat Penjelasan'),
+                            height: 100,
+                            width: 200,
+                            color: Colors.amber,
+                          ),
+                        ),
+                      )
+                    : Container()
               ],
             )
           : SingleChildScrollView(
@@ -286,7 +334,7 @@ class _QuizViewState extends State<QuizView> {
                                         : widget.height / 20)),
                           ),
                         ),
-                        answerColumn
+                        answerColumn,
                       ],
               ),
             ),
