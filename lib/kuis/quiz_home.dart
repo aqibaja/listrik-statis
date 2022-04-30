@@ -29,43 +29,6 @@ class Carousel extends StatefulWidget {
   _CarouselState createState() => _CarouselState();
 }
 
-void contoh2() {
-  var context;
-  showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Center(
-              child: Text(
-            "Contoh Soal 3",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-          )),
-          content: Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            child: PageView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 1,
-              itemBuilder: (context, int index) {
-                return QuizHome();
-              },
-            ),
-          ),
-          actions: <Widget>[
-            ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: const Color.fromARGB(255, 231, 19, 19),
-                ),
-                onPressed: () => Navigator.of(context).pop(),
-                child: const Text(
-                  "KEMBALI",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                )),
-          ],
-        );
-      });
-}
-
 class _CarouselState extends State<Carousel>
     with SingleTickerProviderStateMixin {
   final PageController _controller = PageController();
@@ -126,7 +89,7 @@ class _CarouselState extends State<Carousel>
           child: QuizView(
               showCorrect: true,
               tagColor: Colors.black,
-              questionTag: "Soal: 1",
+              questionTag: "Soal: 2",
               answerColor: Color.fromARGB(255, 20, 20, 20),
               answerBackgroundColor: Color.fromARGB(255, 138, 186, 228),
               questionColor: Colors.white,
@@ -134,9 +97,13 @@ class _CarouselState extends State<Carousel>
               width: 300,
               height: 600,
               question:
-                  "Bagian terkecil dari suatu zat yang tidak bisa dibagi-bagi lagi dengan reaksi kimia biasa adalah….",
-              rightAnswer: "Atom",
-              wrongAnswers: ["Partikel", "Molekul", "Muatan"],
+                  "Muatan dasar yang dibawa partikel dasar sehingga menyebabkan partikel dasar mengalami gaya Tarik-menarik dan Tolak-menolak adalah….",
+              rightAnswer: "Muatan Listrik",
+              wrongAnswers: [
+                "Listrik Statis",
+                "Medan Listrik",
+                "Energi Listrik"
+              ],
               onRightAnswer: () => print("Right"),
               onWrongAnswer: () => print("Wrong"),
               nexTap: () {
@@ -155,7 +122,7 @@ class _CarouselState extends State<Carousel>
           child: QuizView(
               showCorrect: true,
               tagColor: Colors.black,
-              questionTag: "Soal: 1",
+              questionTag: "Soal: 3",
               answerColor: Color.fromARGB(255, 20, 20, 20),
               answerBackgroundColor: Color.fromARGB(255, 138, 186, 228),
               questionColor: Colors.white,
@@ -163,9 +130,13 @@ class _CarouselState extends State<Carousel>
               width: 300,
               height: 600,
               question:
-                  "Bagian terkecil dari suatu zat yang tidak bisa dibagi-bagi lagi dengan reaksi kimia biasa adalah….",
-              rightAnswer: "Atom",
-              wrongAnswers: ["Partikel", "Molekul", "Muatan"],
+                  "Berikut ini yang merupakan pernyataan yang salah adalah…",
+              rightAnswer: "Elektron (tidak bermuatan)",
+              wrongAnswers: [
+                "Proton (bermuatan positif)",
+                "Neutron (tidak bermuatan)",
+                "Elektron (bermuatan negatif)"
+              ],
               onRightAnswer: () => print("Right"),
               onWrongAnswer: () => print("Wrong"),
               nexTap: () {
