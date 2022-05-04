@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\WORK\\listrik-statis\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bs\\values-bs.xml",
+            "outputFile": "/Users/apple/Documents/Job/listrik_statis-1/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zzaa\\.gradle\\caches\\transforms-2\\files-2.1\\bcd58f4f8b0dea68667096f26243123a\\browser-1.4.0\\res\\values-bs\\values-bs.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,159,259,373",
-                        "endColumns": "103,99,113,99",
-                        "endOffsets": "154,254,368,468"
-                    },
-                    "to": {
-                        "startLines": "29,39,40,41",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "2830,3614,3714,3828",
-                        "endColumns": "103,99,113,99",
-                        "endOffsets": "2929,3709,3823,3923"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\zzaa\\.gradle\\caches\\transforms-2\\files-2.1\\b9a960218f5163997c0fdfa3d3078c0e\\core-1.7.0\\res\\values-bs\\values-bs.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "43",
-                        "startColumns": "4",
-                        "startOffsets": "4015",
-                        "endColumns": "100",
-                        "endOffsets": "4111"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\zzaa\\.gradle\\caches\\transforms-2\\files-2.1\\7ed8866a153ba11c73fe6ed707b862b7\\appcompat-1.4.1\\res\\values-bs\\values-bs.xml",
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7ed8866a153ba11c73fe6ed707b862b7/appcompat-1.4.1/res/values-bs/values-bs.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\zzaa\\.gradle\\caches\\transforms-2\\files-2.1\\cb070aa8ca3e58b91c7d3f9173b5f308\\jetified-exoplayer-core-2.17.0\\res\\values-bs\\values-bs.xml",
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/cb070aa8ca3e58b91c7d3f9173b5f308/jetified-exoplayer-core-2.17.0/res/values-bs/values-bs.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -69,6 +35,40 @@
                         "startOffsets": "2934,3009,3070,3135,3208,3287,3360,3460,3541",
                         "endColumns": "74,60,64,72,78,72,99,80,72",
                         "endOffsets": "3004,3065,3130,3203,3282,3355,3455,3536,3609"
+                    }
+                },
+                {
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/b9a960218f5163997c0fdfa3d3078c0e/core-1.7.0/res/values-bs/values-bs.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "43",
+                        "startColumns": "4",
+                        "startOffsets": "4015",
+                        "endColumns": "100",
+                        "endOffsets": "4111"
+                    }
+                },
+                {
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/bcd58f4f8b0dea68667096f26243123a/browser-1.4.0/res/values-bs/values-bs.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,159,259,373",
+                        "endColumns": "103,99,113,99",
+                        "endOffsets": "154,254,368,468"
+                    },
+                    "to": {
+                        "startLines": "29,39,40,41",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "2830,3614,3714,3828",
+                        "endColumns": "103,99,113,99",
+                        "endOffsets": "2929,3709,3823,3923"
                     }
                 }
             ]

@@ -60,6 +60,7 @@ class QuizView extends StatefulWidget {
   final void Function() backTap;
 
   final String dataJawaban;
+  final bool? jawabanImage;
 
   QuizView(
       {this.showCorrect = true,
@@ -80,7 +81,7 @@ class QuizView extends StatefulWidget {
       required this.onWrongAnswer,
       required this.backTap,
       required this.nexTap,
-      required this.dataJawaban});
+      required this.dataJawaban, this.jawabanImage});
 
   _QuizViewState createState() => _QuizViewState();
 }
@@ -88,25 +89,13 @@ class QuizView extends StatefulWidget {
 class _QuizViewState extends State<QuizView> {
   _QuizViewState();
 
-  void contoh(String data) {
+  void contoh(String data, {bool? jawabanImage}) {
     showDialog(
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: const Center(
-                child: Text(
-              "",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-            )),
-            content: Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              child: PageView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 1,
-                itemBuilder: (context, int index) {
-                  return Container(
-                      child: Html(
+            title:  Container(
+                      child: jawabanImage == true? Image.asset(data, fit: BoxFit.fill,):  Html(
                     data: data,
                     tagsList: Html.tags..addAll(["bird", "flutter"]),
                     style: {
@@ -125,9 +114,8 @@ class _QuizViewState extends State<QuizView> {
                         textOverflow: TextOverflow.ellipsis,
                       ),
                     },
-                  ));
-                },
-              ),
+                  )
+                
             ),
             actions: <Widget>[
               ElevatedButton(
@@ -241,7 +229,7 @@ class _QuizViewState extends State<QuizView> {
 
     answerColumn.children.add(
       Padding(
-        padding: const EdgeInsets.only(top: 60, left: 50.0, right: 50),
+        padding: const EdgeInsets.only(top: 0, left: 50.0, right: 50),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -338,36 +326,18 @@ class _QuizViewState extends State<QuizView> {
                                 )),
                               ),
                               widget.image!,
-                              answerColumn
-                            ]
-                          : [
-                              Container(
-                                padding: EdgeInsets.all(20),
-                                child: RichText(
-                                  text: TextSpan(
-                                      text: widget.question,
-                                      style: TextStyle(
-                                          color: widget.questionColor,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20)),
-                                ),
-                              ),
                               answerColumn,
-                            ],
-                    ),
-                  ),
-                ),
-                isTapped == true
+                              isTapped == true
                     ? Align(
                         alignment: Alignment.bottomCenter,
                         child: Padding(
-                          padding: const EdgeInsets.only(bottom: 30),
+                          padding: const EdgeInsets.only(bottom: 30, top: 20),
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
                             ),
                             child: InkWell(
-                              onTap: () => contoh(widget.dataJawaban),
+                              onTap: () => contoh(widget.dataJawaban, jawabanImage: widget.jawabanImage),
                               child: Container(
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
@@ -388,6 +358,56 @@ class _QuizViewState extends State<QuizView> {
                         ),
                       )
                     : Container()
+                            ]
+                          : [
+                              Container(
+                                padding: EdgeInsets.all(20),
+                                child: RichText(
+                                  text: TextSpan(
+                                      text: widget.question,
+                                      style: TextStyle(
+                                          color: widget.questionColor,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20)),
+                                ),
+                              ),
+                              answerColumn,
+                              isTapped == true
+                    ? Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 30, top: 20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: InkWell(
+                              onTap: () => contoh(widget.dataJawaban, jawabanImage: widget.jawabanImage),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Color.fromARGB(255, 199, 232, 32)),
+                                height: 60,
+                                width: 100,
+                                child: Center(
+                                  child: Text('Lihat Penjelasan',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18)),
+                                ),
+                              ),
+                            ),
+                            height: 70,
+                            width: 180,
+                          ),
+                        ),
+                      )
+                    : Container()
+                            ],
+                    ),
+                  ),
+                ),
+                
               ],
             )
           : SingleChildScrollView(

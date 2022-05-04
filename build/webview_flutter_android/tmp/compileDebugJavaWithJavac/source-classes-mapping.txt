@@ -11,19 +11,19 @@ io/flutter/plugins/webviewflutter/JavaScriptChannelHostApiImpl.java
  io.flutter.plugins.webviewflutter.JavaScriptChannelHostApiImpl$JavaScriptChannelCreator
 io/flutter/plugins/webviewflutter/ThreadedInputConnectionProxyAdapterView.java
  io.flutter.plugins.webviewflutter.ThreadedInputConnectionProxyAdapterView
+io/flutter/plugins/webviewflutter/FlutterWebViewFactory.java
+ io.flutter.plugins.webviewflutter.FlutterWebViewFactory
 io/flutter/plugins/webviewflutter/DisplayListenerProxy.java
  io.flutter.plugins.webviewflutter.DisplayListenerProxy
  io.flutter.plugins.webviewflutter.DisplayListenerProxy$1
+io/flutter/plugins/webviewflutter/JavaScriptChannel.java
+ io.flutter.plugins.webviewflutter.JavaScriptChannel
+io/flutter/plugins/webviewflutter/Releasable.java
+ io.flutter.plugins.webviewflutter.Releasable
 io/flutter/plugins/webviewflutter/DownloadListenerHostApiImpl.java
  io.flutter.plugins.webviewflutter.DownloadListenerHostApiImpl
  io.flutter.plugins.webviewflutter.DownloadListenerHostApiImpl$DownloadListenerCreator
  io.flutter.plugins.webviewflutter.DownloadListenerHostApiImpl$DownloadListenerImpl
-io/flutter/plugins/webviewflutter/Releasable.java
- io.flutter.plugins.webviewflutter.Releasable
-io/flutter/plugins/webviewflutter/FlutterWebViewFactory.java
- io.flutter.plugins.webviewflutter.FlutterWebViewFactory
-io/flutter/plugins/webviewflutter/JavaScriptChannel.java
- io.flutter.plugins.webviewflutter.JavaScriptChannel
 io/flutter/plugins/webviewflutter/WebViewHostApiImpl.java
  io.flutter.plugins.webviewflutter.WebViewHostApiImpl
  io.flutter.plugins.webviewflutter.WebViewHostApiImpl$InputAwareWebViewPlatformView
@@ -87,13 +87,13 @@ io/flutter/plugins/webviewflutter/WebViewClientFlutterApiImpl.java
 io/flutter/plugins/webviewflutter/InputAwareWebView.java
  io.flutter.plugins.webviewflutter.InputAwareWebView
  io.flutter.plugins.webviewflutter.InputAwareWebView$1
-io/flutter/plugins/webviewflutter/WebChromeClientFlutterApiImpl.java
- io.flutter.plugins.webviewflutter.WebChromeClientFlutterApiImpl
 io/flutter/plugins/webviewflutter/WebChromeClientHostApiImpl.java
  io.flutter.plugins.webviewflutter.WebChromeClientHostApiImpl
  io.flutter.plugins.webviewflutter.WebChromeClientHostApiImpl$WebChromeClientCreator
  io.flutter.plugins.webviewflutter.WebChromeClientHostApiImpl$WebChromeClientImpl
  io.flutter.plugins.webviewflutter.WebChromeClientHostApiImpl$WebChromeClientImpl$1
+io/flutter/plugins/webviewflutter/WebChromeClientFlutterApiImpl.java
+ io.flutter.plugins.webviewflutter.WebChromeClientFlutterApiImpl
 io/flutter/plugins/webviewflutter/InstanceManager.java
  io.flutter.plugins.webviewflutter.InstanceManager
 io/flutter/plugins/webviewflutter/WebSettingsHostApiImpl.java
