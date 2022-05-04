@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:listrik_statis/indikator/kd.dart';
 import 'package:listrik_statis/indikator/ki.dart';
 
 class MenuIndikator extends StatefulWidget {
@@ -16,41 +17,73 @@ class _MenuIndikatorState extends State<MenuIndikator> {
         title: const Text('Indikator'),
         backgroundColor: const Color.fromARGB(255, 57, 142, 153),
       ),
-      body: Center(
-        child: Container(
-            child: Container(
-          height: 100,
-          width: 210,
-          decoration: BoxDecoration(
-              boxShadow: <BoxShadow>[
-                BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 5.0,
-                ),
-              ],
-              color: const Color.fromARGB(255, 153, 240, 132),
-              borderRadius: BorderRadius.circular(15)),
-          child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 120, 225, 94),
-              ),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Ki()));
-              },
-              child: const Center(
-                child: Text(
-                  "KOMPETENSI INTI / KOMPETENSI DASAR",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
+      body: Container(
+          child: Center(
+        child: Column(
+          children: [
+            SizedBox(height: 200),
+            Container(
+              child: GestureDetector(
+                onTap: () => Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Ki())),
+                child: Center(
+                  child: Container(
+                    height: 80,
+                    width: 250,
+                    decoration: BoxDecoration(
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                            color: Colors.black,
+                            blurRadius: 5.0,
+                          ),
+                        ],
+                        color: const Color.fromARGB(255, 153, 240, 132),
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Center(
+                      child: (Text(
+                        'KOMPETENSI INTI',
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
+                      )),
+                    ),
                   ),
                 ),
-              )),
-        )),
-      ),
+              ),
+            ),
+            SizedBox(height: 50),
+            Container(
+              child: GestureDetector(
+                onTap: () => Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Kd())),
+                child: Center(
+                  child: Container(
+                    height: 80,
+                    width: 250,
+                    decoration: BoxDecoration(
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                            color: Colors.black,
+                            blurRadius: 5.0,
+                          ),
+                        ],
+                        color: const Color.fromARGB(255, 153, 240, 132),
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Center(
+                      child: (Text(
+                        'KOMPETENSI DASAR',
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
+                      )),
+                    ),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+      )),
     );
   }
 }

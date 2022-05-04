@@ -70,28 +70,31 @@ class Menu1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () =>
-          Navigator.push(context, MaterialPageRoute(builder: (context) => url)),
-      child: Center(
-        child: Container(
-          height: 80,
-          width: 250,
-          decoration: BoxDecoration(
-              boxShadow: <BoxShadow>[
-                BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 5.0,
-                ),
-              ],
-              color: const Color.fromARGB(255, 153, 240, 132),
-              borderRadius: BorderRadius.circular(15)),
-          child: Center(
-            child: (Text(
-              title,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-            )),
+    return Container(
+      child: GestureDetector(
+        onTap: () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => url)),
+        child: Center(
+          child: Container(
+            height: 80,
+            width: 250,
+            decoration: BoxDecoration(
+                boxShadow: <BoxShadow>[
+                  BoxShadow(
+                    color: Colors.black,
+                    blurRadius: 5.0,
+                  ),
+                ],
+                color: const Color.fromARGB(255, 153, 240, 132),
+                borderRadius: BorderRadius.circular(15)),
+            child: Center(
+              child: (Text(
+                title,
+                textAlign: TextAlign.center,
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              )),
+            ),
           ),
         ),
       ),

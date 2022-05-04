@@ -59,6 +59,8 @@ class QuizView extends StatefulWidget {
 
   final void Function() backTap;
 
+  final String dataJawaban;
+
   QuizView(
       {this.showCorrect = true,
       this.questionTag,
@@ -77,43 +79,16 @@ class QuizView extends StatefulWidget {
       required this.onRightAnswer,
       required this.onWrongAnswer,
       required this.backTap,
-      required this.nexTap});
+      required this.nexTap,
+      required this.dataJawaban});
 
   _QuizViewState createState() => _QuizViewState();
 }
 
-const htmlData1 = r"""
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c6{margin-left:21pt;padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c4{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left;height:11pt}.c2{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Times New Roman";font-style:normal}.c5{margin-left:43pt;padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify}.c1{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Times New Roman";font-style:normal}.c3{margin-left:43pt;padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:center}.c0{background-color:#ffffff;max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c0"><p class="c3"><span class="c1">Pembahasan </span></p><p class="c5"><span class="c2">Atom adalah bagian terkecil dari suatu zat yang tidak bisa dibagi-bagi lagi dengan reaksi kimia biasa.</span></p><p class="c6"><span class="c1"></span></p><p class="c4"><span class="c1"></span></p></body></html>
-""";
-
 class _QuizViewState extends State<QuizView> {
   _QuizViewState();
 
-  List<Widget> _pages = [
-    Container(
-        child: Html(
-      data: htmlData1,
-      tagsList: Html.tags..addAll(["bird", "flutter"]),
-      style: {
-        "body": Style(padding: EdgeInsets.all(10)),
-        "tr": Style(
-          border: Border(bottom: BorderSide(color: Colors.grey)),
-        ),
-        "th": Style(
-          backgroundColor: Colors.grey,
-        ),
-        "td": Style(
-          alignment: Alignment.topLeft,
-        ),
-        'h5': Style(
-          maxLines: 2,
-          textOverflow: TextOverflow.ellipsis,
-        ),
-      },
-    ))
-  ];
-
-  void contoh2() {
+  void contoh(String data) {
     showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -130,7 +105,27 @@ class _QuizViewState extends State<QuizView> {
                 scrollDirection: Axis.horizontal,
                 itemCount: 1,
                 itemBuilder: (context, int index) {
-                  return _pages[index];
+                  return Container(
+                      child: Html(
+                    data: data,
+                    tagsList: Html.tags..addAll(["bird", "flutter"]),
+                    style: {
+                      "body": Style(padding: EdgeInsets.all(10)),
+                      "tr": Style(
+                        border: Border(bottom: BorderSide(color: Colors.grey)),
+                      ),
+                      "th": Style(
+                        backgroundColor: Colors.grey,
+                      ),
+                      "td": Style(
+                        alignment: Alignment.topLeft,
+                      ),
+                      'h5': Style(
+                        maxLines: 2,
+                        textOverflow: TextOverflow.ellipsis,
+                      ),
+                    },
+                  ));
                 },
               ),
             ),
@@ -172,8 +167,8 @@ class _QuizViewState extends State<QuizView> {
           padding: EdgeInsets.all(15),
           child: ElevatedButton(
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.resolveWith(
-                  (states) => widget.answerBackgroundColor),
+              backgroundColor: MaterialStateProperty.resolveWith((states) =>
+                  isTapped ? Colors.red : widget.answerBackgroundColor),
               padding: MaterialStateProperty.resolveWith(
                   (states) => EdgeInsets.fromLTRB(20, 10, 20, 10)),
               shape: MaterialStateProperty.resolveWith(
@@ -371,25 +366,22 @@ class _QuizViewState extends State<QuizView> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  shape: new RoundedRectangleBorder(
-                                    borderRadius:
-                                        new BorderRadius.circular(15.0),
-                                  ),
-                                ),
-                                onPressed: () {
-                                  contoh2();
-                                },
+                            child: InkWell(
+                              onTap: () => contoh(widget.dataJawaban),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Color.fromARGB(255, 199, 232, 32)),
+                                height: 60,
+                                width: 100,
                                 child: Center(
-                                  child: Text(
-                                    "Lihat Penjelasan",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                )),
+                                  child: Text('Lihat Penjelasan',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18)),
+                                ),
+                              ),
+                            ),
                             height: 70,
                             width: 180,
                           ),
