@@ -62,6 +62,9 @@ class QuizView extends StatefulWidget {
   final String dataJawaban;
   final bool? jawabanImage;
 
+  final bool? kembali;
+  final bool? next;
+
   QuizView(
       {this.showCorrect = true,
       this.questionTag,
@@ -82,7 +85,9 @@ class QuizView extends StatefulWidget {
       required this.backTap,
       required this.nexTap,
       required this.dataJawaban,
-      this.jawabanImage});
+      this.jawabanImage,
+      this.kembali,
+      this.next});
 
   _QuizViewState createState() => _QuizViewState();
 }
@@ -234,40 +239,44 @@ class _QuizViewState extends State<QuizView> {
 
     answerColumn.children.add(
       Padding(
-        padding: const EdgeInsets.only(top: 0, left: 50.0, right: 50),
+        padding: const EdgeInsets.only(top: 0, left: 15.0, right: 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            InkWell(
-              onTap: () => widget.backTap(),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color.fromARGB(255, 59, 162, 222)),
-                height: 60,
-                width: 100,
-                child: Center(
-                  child: Text('Kembali',
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20)),
-                ),
-              ),
-            ),
-            InkWell(
-              onTap: () => widget.nexTap(),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color.fromARGB(255, 59, 222, 102)),
-                height: 60,
-                width: 100,
-                child: Center(
-                  child: Text('Selanjutnya',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-                ),
-              ),
-            ),
+            widget.kembali == false
+                ? Container()
+                : InkWell(
+                    onTap: () => widget.backTap(),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Color.fromARGB(255, 59, 162, 222)),
+                      height: 60,
+                      width: 100,
+                      child: Center(
+                        child: Text('Kembali',
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 20)),
+                      ),
+                    ),
+                  ),
+            widget.next == false
+                ? Container()
+                : InkWell(
+                    onTap: () => widget.nexTap(),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Color.fromARGB(255, 59, 222, 102)),
+                      height: 60,
+                      width: 100,
+                      child: Center(
+                        child: Text('Selanjutnya',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18)),
+                      ),
+                    ),
+                  ),
           ],
         ),
       ),

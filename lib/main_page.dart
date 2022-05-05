@@ -96,13 +96,17 @@ class _MainPageState extends State<MainPage> {
                     ],
                   ),
                   SizedBox(height: 20),
-                  Menu(
-                    marginWidth: marginWidth,
-                    marginHight: marginHeight,
-                    isPortrait: isPortrait,
-                    image: "assets/image/gambar5.png",
-                    title: "VirtualLab",
-                    url: const VirtualLab(),
+                  Row(
+                    children: [
+                      Menu(
+                        marginWidth: marginWidth,
+                        marginHight: marginHeight,
+                        isPortrait: isPortrait,
+                        image: "assets/image/gambar5.png",
+                        title: "VirtualLab",
+                        url: const VirtualLab(),
+                      ),
+                    ],
                   ),
                   SizedBox(height: 20),
                 ],

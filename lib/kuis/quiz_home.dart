@@ -111,6 +111,7 @@ class _CarouselState extends State<Carousel>
         },
         dataJawaban: htmlData1,
         backTap: () {},
+        kembali: false,
       )),
       SliderBox(
         child: QuizView(
@@ -411,7 +412,8 @@ class _CarouselState extends State<Carousel>
                 _controller.animateToPage(nextPage,
                     duration: Duration(seconds: 1), curve: Curves.linear);
               },
-              dataJawaban: htmlData10)),
+              dataJawaban: htmlData10,
+              next: false)),
     ];
 
     PageIndicatorContainer container = new PageIndicatorContainer(
