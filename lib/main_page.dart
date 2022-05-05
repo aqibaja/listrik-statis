@@ -33,24 +33,24 @@ class _MainPageState extends State<MainPage> {
                 children: [
                   SizedBox(height: 20),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 5),
+                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     alignment: Alignment.topLeft,
                     child: Text(
                       'Halo',
                       style: TextStyle(
-                        fontSize: 50,
+                        fontSize: MediaQuery.of(context).size.width * 0.12,
                         color: Color.fromARGB(213, 212, 235, 246),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(20, 0, 0, 5),
+                    padding: EdgeInsets.fromLTRB(20, 0, 0, 10),
                     alignment: Alignment.topLeft,
                     child: Text(
                       'Selamat Datang',
                       style: TextStyle(
-                          fontSize: 50,
+                          fontSize: MediaQuery.of(context).size.width * 0.12,
                           color: Color.fromARGB(213, 212, 235, 246),
                           fontWeight: FontWeight.bold),
                     ),
@@ -96,17 +96,13 @@ class _MainPageState extends State<MainPage> {
                     ],
                   ),
                   SizedBox(height: 20),
-                  Row(
-                    children: [
-                      Menu(
-                        marginWidth: marginWidth,
-                        marginHight: marginHeight,
-                        isPortrait: isPortrait,
-                        image: "assets/image/gambar5.png",
-                        title: "VirtualLab",
-                        url: const VirtualLab(),
-                      ),
-                    ],
+                  Menu(
+                    marginWidth: marginWidth,
+                    marginHight: marginHeight,
+                    isPortrait: isPortrait,
+                    image: "assets/image/gambar5.png",
+                    title: "VirtualLab",
+                    url: const VirtualLab(),
                   ),
                   SizedBox(height: 20),
                 ],

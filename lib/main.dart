@@ -8,10 +8,12 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false, home: SplashScreen(seconds: 0));
+    return const MaterialApp(
+        debugShowCheckedModeBanner: false, home: SplashScreen(seconds: 3));
   }
 }
 
@@ -42,6 +44,46 @@ class _SplashScreenState extends State<SplashScreen> {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return Scaffold();
+    return Scaffold(
+        body: Container(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+              colors: [Colors.blue, Colors.green])),
+      child: Column(
+        children: [
+          SizedBox(
+            height: 250,
+          ),
+          Center(
+            child: Image.asset(
+              "assets/image/ikon1.png",
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Container(
+            child: Text(
+              'Created By',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Container(
+            child: Text(
+              'salsabila',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  fontFamily: 'RobotoMono'),
+            ),
+          ),
+        ],
+      ),
+    ));
   }
 }

@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:listrik_statis/kuis/quiz_view.dart';
 import 'package:page_indicator/page_indicator.dart';
@@ -65,22 +67,12 @@ class _CarouselState extends State<Carousel>
 <html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c3{background-color:#ffffff;color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:15pt;font-family:"Times New Roman";font-style:normal}.c5{background-color:#ffffff;color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:15pt;font-family:"Times New Roman";font-style:normal}.c2{padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c4{padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify}.c1{padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:center}.c6{background-color:#ffffff;max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c6"><p class="c1"><span class="c5">Pembahasan</span></p><p class="c4"><span class="c3">Benjamin Franklin (1706-1790) merupakan orang yang pertama kali menyatakan bahwa petir terjadi akibat adanya gejala listrik.</span></p><p class="c2"><span class="c3"></span></p><p class="c0"><span class="c3"></span></p></body></html>
 """;
 
-  final htmlData5 = r"""
-<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:42.55pt;line-height:150%;font-size:15px;font-family:"Calibri",sans-serif;'><br></p>
-<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:42.55pt;line-height:150%;font-size:15px;font-family:"Calibri",sans-serif;'><br></p>
-<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:42.55pt;line-height:150%;font-size:15px;font-family:"Calibri",sans-serif;'><br></p>
-<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:42.55pt;line-height:150%;font-size:15px;font-family:"Calibri",sans-serif;'><br></p>
-<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:42.55pt;line-height:150%;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:15px;line-height:107%;font-family:&quot;Calibri&quot;,sans-serif;"></span><br></p>
-""";
-  final htmlData6 = r"""
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{background-color:#ffffff;color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c2{margin-left:43pt;padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c6{margin-left:43pt;padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:center}.c1{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c5{margin-left:43pt;padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify}.c7{padding-top:0pt;padding-bottom:0pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c4{max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.c3{background-color:#ffffff}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c3 c4"><p class="c6"><span class="c1 c3">Pembahasan </span></p><p class="c5"><span class="c0">Atom tersusun atas partikel subatom yaitu proton (bermuatan positif), neutron (tidak bermuatan), dan electron (bermuatan negatif).</span></p><p class="c2"><span class="c1 c3"></span></p><p class="c7"><span class="c1"></span></p></body></html>
-""";
+  final htmlData5 = 'assets/image/penjelasanSoal5.png';
+  final htmlData6 = 'assets/image/penjelasanSoal6.png';
   final htmlData7 = r"""
 <html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c3{background-color:#ffffff;color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:15pt;font-family:"Times New Roman";font-style:normal}.c5{background-color:#ffffff;color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:15pt;font-family:"Times New Roman";font-style:normal}.c2{padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c4{padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify}.c1{padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:center}.c6{background-color:#ffffff;max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c6"><p class="c1"><span class="c5">Pembahasan</span></p><p class="c4"><span class="c3">Benjamin Franklin (1706-1790) merupakan orang yang pertama kali menyatakan bahwa petir terjadi akibat adanya gejala listrik.</span></p><p class="c2"><span class="c3"></span></p><p class="c0"><span class="c3"></span></p></body></html>
 """;
-  final htmlData8 = r"""
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{background-color:#ffffff;color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c2{margin-left:43pt;padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c6{margin-left:43pt;padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:center}.c1{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c5{margin-left:43pt;padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify}.c7{padding-top:0pt;padding-bottom:0pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c4{max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.c3{background-color:#ffffff}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c3 c4"><p class="c6"><span class="c1 c3">Pembahasan </span></p><p class="c5"><span class="c0">Atom tersusun atas partikel subatom yaitu proton (bermuatan positif), neutron (tidak bermuatan), dan electron (bermuatan negatif).</span></p><p class="c2"><span class="c1 c3"></span></p><p class="c7"><span class="c1"></span></p></body></html>
-""";
+  final htmlData8 = 'assets/image/penjelasanSoal8.png';
   final htmlData9 = r"""
 <html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{background-color:#ffffff;color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:15pt;font-family:"Times New Roman";font-style:normal}.c6{background-color:#ffffff;color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:15pt;font-family:"Times New Roman";font-style:normal}.c5{margin-left:43pt;padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify}.c2{padding-top:0pt;padding-bottom:0pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c3{padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:justify;height:11pt}.c4{padding-top:12pt;padding-bottom:12pt;line-height:1.5;orphans:2;widows:2;text-align:center}.c1{background-color:#ffffff;max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c1"><p class="c4"><span class="c6">Pembahasan</span></p><p class="c5"><span class="c0">Neuron &nbsp;merupakan &nbsp;bagian &nbsp;atau &nbsp;unit &nbsp;struktur &nbsp;dari &nbsp;system &nbsp;saraf.</span></p><p class="c3"><span class="c0"></span></p><p class="c3"><span class="c0"></span></p><p class="c2"><span class="c0"></span></p></body></html>
 """;
@@ -117,13 +109,8 @@ class _CarouselState extends State<Carousel>
           _controller.animateToPage(nextPage,
               duration: Duration(seconds: 1), curve: Curves.linear);
         },
-        backTap: () {
-          int nextPage = _controller.page!.round() - 1;
-
-          _controller.animateToPage(nextPage,
-              duration: Duration(seconds: 1), curve: Curves.linear);
-        },
         dataJawaban: htmlData1,
+        backTap: () {},
       )),
       SliderBox(
         child: QuizView(
@@ -148,13 +135,13 @@ class _CarouselState extends State<Carousel>
             _controller.animateToPage(nextPage,
                 duration: Duration(seconds: 1), curve: Curves.linear);
           },
+          dataJawaban: htmlData2,
           backTap: () {
             int nextPage = _controller.page!.round() - 1;
 
             _controller.animateToPage(nextPage,
                 duration: Duration(seconds: 1), curve: Curves.linear);
           },
-          dataJawaban: htmlData2,
         ),
       ),
       SliderBox(
@@ -227,74 +214,78 @@ class _CarouselState extends State<Carousel>
               dataJawaban: htmlData4)),
       SliderBox(
           child: QuizView(
-              image: Container(
-                child: Image.asset(
-                  "assets/image/soal5.png",
-                  fit: BoxFit.fill,
-                ),
-              ),
-              showCorrect: true,
-              tagColor: Colors.black,
-              questionTag: "Soal: 5",
-              answerColor: Color.fromARGB(255, 20, 20, 20),
-              answerBackgroundColor: Color.fromARGB(255, 138, 186, 228),
-              questionColor: Colors.white,
-              backgroundColor: Color.fromARGB(255, 48, 118, 138),
-              width: 300,
-              height: 600,
-              question: "",
-              rightAnswer: "36 N",
-              wrongAnswers: ["12 N", "24 N", "36 N"],
-              onRightAnswer: () => print("Right"),
-              onWrongAnswer: () => print("Wrong"),
-              nexTap: () {
-                int nextPage = _controller.page!.round() + 1;
+        image: Container(
+          child: Image.asset(
+            "assets/image/soal5.png",
+            fit: BoxFit.fill,
+          ),
+        ),
+        showCorrect: true,
+        tagColor: Colors.black,
+        questionTag: "Soal: 5",
+        answerColor: Color.fromARGB(255, 20, 20, 20),
+        answerBackgroundColor: Color.fromARGB(255, 138, 186, 228),
+        questionColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 48, 118, 138),
+        width: 300,
+        height: 600,
+        question: "",
+        rightAnswer: "36 N",
+        wrongAnswers: ["12 N", "24 N", "36 N"],
+        onRightAnswer: () => print("Right"),
+        onWrongAnswer: () => print("Wrong"),
+        nexTap: () {
+          int nextPage = _controller.page!.round() + 1;
 
-                _controller.animateToPage(nextPage,
-                    duration: Duration(seconds: 1), curve: Curves.linear);
-              },
-              backTap: () {
-                int nextPage = _controller.page!.round() - 1;
+          _controller.animateToPage(nextPage,
+              duration: Duration(seconds: 1), curve: Curves.linear);
+        },
+        backTap: () {
+          int nextPage = _controller.page!.round() - 1;
 
-                _controller.animateToPage(nextPage,
-                    duration: Duration(seconds: 1), curve: Curves.linear);
-              },
-              dataJawaban: htmlData5)),
+          _controller.animateToPage(nextPage,
+              duration: Duration(seconds: 1), curve: Curves.linear);
+        },
+        dataJawaban: htmlData5,
+        jawabanImage: true,
+      )),
       SliderBox(
           child: QuizView(
-              image: Container(
-                child: Image.asset(
-                  "assets/image/soal6.png",
-                  fit: BoxFit.fill,
-                ),
-              ),
-              showCorrect: true,
-              tagColor: Colors.black,
-              questionTag: "Soal: 6",
-              answerColor: Color.fromARGB(255, 20, 20, 20),
-              answerBackgroundColor: Color.fromARGB(255, 138, 186, 228),
-              questionColor: Colors.white,
-              backgroundColor: Color.fromARGB(255, 48, 118, 138),
-              width: 300,
-              height: 600,
-              question: "",
-              rightAnswer: "10^8 N/C",
-              wrongAnswers: ["10^7 N/C", "10^6 N/C", "10^5 N/C"],
-              onRightAnswer: () => print("Right"),
-              onWrongAnswer: () => print("Wrong"),
-              nexTap: () {
-                int nextPage = _controller.page!.round() + 1;
+        image: Container(
+          child: Image.asset(
+            "assets/image/soal6.png",
+            fit: BoxFit.fill,
+          ),
+        ),
+        showCorrect: true,
+        tagColor: Colors.black,
+        questionTag: "Soal: 6",
+        answerColor: Color.fromARGB(255, 20, 20, 20),
+        answerBackgroundColor: Color.fromARGB(255, 138, 186, 228),
+        questionColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 48, 118, 138),
+        width: 300,
+        height: 600,
+        question: "",
+        rightAnswer: "10^8 N/C",
+        wrongAnswers: ["10^7 N/C", "10^6 N/C", "10^5 N/C"],
+        onRightAnswer: () => print("Right"),
+        onWrongAnswer: () => print("Wrong"),
+        nexTap: () {
+          int nextPage = _controller.page!.round() + 1;
 
-                _controller.animateToPage(nextPage,
-                    duration: Duration(seconds: 1), curve: Curves.linear);
-              },
-              backTap: () {
-                int nextPage = _controller.page!.round() - 1;
+          _controller.animateToPage(nextPage,
+              duration: Duration(seconds: 1), curve: Curves.linear);
+        },
+        backTap: () {
+          int nextPage = _controller.page!.round() - 1;
 
-                _controller.animateToPage(nextPage,
-                    duration: Duration(seconds: 1), curve: Curves.linear);
-              },
-              dataJawaban: htmlData6)),
+          _controller.animateToPage(nextPage,
+              duration: Duration(seconds: 1), curve: Curves.linear);
+        },
+        dataJawaban: htmlData6,
+        jawabanImage: true,
+      )),
       SliderBox(
           child: QuizView(
               showCorrect: true,
@@ -331,34 +322,36 @@ class _CarouselState extends State<Carousel>
               dataJawaban: htmlData7)),
       SliderBox(
           child: QuizView(
-              showCorrect: true,
-              tagColor: Colors.black,
-              questionTag: "Soal: 8",
-              answerColor: Color.fromARGB(255, 20, 20, 20),
-              answerBackgroundColor: Color.fromARGB(255, 138, 186, 228),
-              questionColor: Colors.white,
-              backgroundColor: Color.fromARGB(255, 48, 118, 138),
-              width: 300,
-              height: 600,
-              question:
-                  "Berapakah beda potensial kutub-kutub baterai sebuah rangkaian jika baterai tersebut membutuhkan energi sebesar 60 J untuk memindahkan muatan sebesar 20 C ?",
-              rightAnswer: "3 V",
-              wrongAnswers: ["2 V", "4 V", "5 V"],
-              onRightAnswer: () => print("Right"),
-              onWrongAnswer: () => print("Wrong"),
-              nexTap: () {
-                int nextPage = _controller.page!.round() + 1;
+        showCorrect: true,
+        tagColor: Colors.black,
+        questionTag: "Soal: 8",
+        answerColor: Color.fromARGB(255, 20, 20, 20),
+        answerBackgroundColor: Color.fromARGB(255, 138, 186, 228),
+        questionColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 48, 118, 138),
+        width: 300,
+        height: 600,
+        question:
+            "Berapakah beda potensial kutub-kutub baterai sebuah rangkaian jika baterai tersebut membutuhkan energi sebesar 60 J untuk memindahkan muatan sebesar 20 C ?",
+        rightAnswer: "3 V",
+        wrongAnswers: ["2 V", "4 V", "5 V"],
+        onRightAnswer: () => print("Right"),
+        onWrongAnswer: () => print("Wrong"),
+        nexTap: () {
+          int nextPage = _controller.page!.round() + 1;
 
-                _controller.animateToPage(nextPage,
-                    duration: Duration(seconds: 1), curve: Curves.linear);
-              },
-              backTap: () {
-                int nextPage = _controller.page!.round() - 1;
+          _controller.animateToPage(nextPage,
+              duration: Duration(seconds: 1), curve: Curves.linear);
+        },
+        backTap: () {
+          int nextPage = _controller.page!.round() - 1;
 
-                _controller.animateToPage(nextPage,
-                    duration: Duration(seconds: 1), curve: Curves.linear);
-              },
-              dataJawaban: htmlData8)),
+          _controller.animateToPage(nextPage,
+              duration: Duration(seconds: 1), curve: Curves.linear);
+        },
+        dataJawaban: htmlData8,
+        jawabanImage: true,
+      )),
       SliderBox(
           child: QuizView(
               showCorrect: true,

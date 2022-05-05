@@ -35,7 +35,7 @@
 26-->[androidx.core:core:1.7.0] C:\Users\zzaa\.gradle\caches\transforms-2\files-2.1\b9a960218f5163997c0fdfa3d3078c0e\core-1.7.0\AndroidManifest.xml:24:18-86
 27        android:debuggable="true"
 28        android:icon="@mipmap/ic_launcher"
-29        android:label="listrik_statis" >
+29        android:label="Listrik Statis" >
 30        <activity
 31            android:name="com.example.listrik_statis.MainActivity"
 32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
