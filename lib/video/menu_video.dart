@@ -3,6 +3,8 @@ import 'package:listrik_statis/video/video1.dart';
 import 'package:listrik_statis/video/video2.dart';
 import 'package:listrik_statis/video/video3.dart';
 import 'package:listrik_statis/video/video4.dart';
+import 'package:listrik_statis/video/video5.dart';
+import 'package:listrik_statis/video/video6.dart';
 
 class MenuVideo extends StatefulWidget {
   const MenuVideo({Key? key}) : super(key: key);
@@ -21,7 +23,7 @@ class _MenuVideoState extends State<MenuVideo> {
         ),
         body: Container(
           child: Column(children: [
-            SizedBox(height: 150),
+            SizedBox(height: 60),
             Menu1(
               title: "Video Muatan Listrik",
               url: const Video1(),
@@ -38,10 +40,19 @@ class _MenuVideoState extends State<MenuVideo> {
             ),
             SizedBox(height: 20),
             Menu1(
-              title: "Video Beda Potensial dan Energi Listrik ",
+              title: "Video Beda Potensial dan Energi",
               url: const Video4(),
             ),
             SizedBox(height: 20),
+            Menu1(
+              title: "Video Kelistrikan Pada Sel Saraf",
+              url: const Video5(),
+            ),
+            SizedBox(height: 20),
+            Menu1(
+              title: "Video Hewan Penghantar Listrik",
+              url: const Video6(),
+            ),
           ]),
         ));
   }

@@ -39,7 +39,7 @@ class _HewanState extends State<Hewan> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Hewan-hewan Penghasil Listrik'),
+        title: const Text('Hewan Penghasil Listrik'),
         backgroundColor: const Color.fromARGB(255, 57, 142, 153),
       ),
       body: SingleChildScrollView(

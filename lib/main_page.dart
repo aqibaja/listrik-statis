@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:listrik_statis/VirtualLab/menu_virtual.dart';
+import 'package:listrik_statis/profil.dart';
 import 'package:listrik_statis/video/menu_video.dart';
 import 'package:listrik_statis/indikator/menuIndikator.dart';
 import 'package:listrik_statis/materi/menu_materi.dart';
-import 'package:listrik_statis/virtual_lab.dart';
+import 'package:listrik_statis/VirtualLab/muatan_listrik_lab.dart';
 
 import 'kuis/quiz_home.dart';
 
@@ -61,16 +63,16 @@ class _MainPageState extends State<MainPage> {
                       marginHight: marginHeight,
                       isPortrait: isPortrait,
                       image: "assets/image/gambar1.png",
-                      title: "Indikator",
+                      title: "Kompetensi",
                       url: const MenuIndikator(),
                     ),
                     Menu(
                       marginWidth: marginWidth,
                       marginHight: marginHeight,
                       isPortrait: isPortrait,
-                      image: "assets/image/gambar2.png",
-                      title: "Kuis",
-                      url: QuizHome(),
+                      image: "assets/image/gambar3.png",
+                      title: "Materi",
+                      url: const MenuMateri(),
                     ),
                   ]),
                   SizedBox(height: 20),
@@ -81,17 +83,17 @@ class _MainPageState extends State<MainPage> {
                         marginWidth: marginWidth,
                         marginHight: marginHeight,
                         isPortrait: isPortrait,
-                        image: "assets/image/gambar3.png",
-                        title: "Materi",
-                        url: const MenuMateri(),
+                        image: "assets/image/gambar4.png",
+                        title: "Video",
+                        url: MenuVideo(),
                       ),
                       Menu(
                         marginWidth: marginWidth,
                         marginHight: marginHeight,
                         isPortrait: isPortrait,
-                        image: "assets/image/gambar4.png",
-                        title: "Video",
-                        url: MenuVideo(),
+                        image: "assets/image/gambar5.png",
+                        title: "VirtualLab",
+                        url: const MenuVirtual(),
                       ),
                     ],
                   ),
@@ -102,9 +104,17 @@ class _MainPageState extends State<MainPage> {
                         marginWidth: marginWidth,
                         marginHight: marginHeight,
                         isPortrait: isPortrait,
-                        image: "assets/image/gambar5.png",
-                        title: "VirtualLab",
-                        url: const VirtualLab(),
+                        image: "assets/image/gambar2.png",
+                        title: "Kuis",
+                        url: QuizHome(),
+                      ),
+                      Menu(
+                        marginWidth: marginWidth,
+                        marginHight: marginHeight,
+                        isPortrait: isPortrait,
+                        image: "assets/image/gambar6.png",
+                        title: "Profil",
+                        url: const Profil(),
                       ),
                     ],
                   ),

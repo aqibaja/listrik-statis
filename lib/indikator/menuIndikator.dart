@@ -14,7 +14,7 @@ class _MenuIndikatorState extends State<MenuIndikator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Indikator'),
+        title: const Text('Kompetensi'),
         backgroundColor: const Color.fromARGB(255, 57, 142, 153),
       ),
       body: Container(
@@ -71,7 +71,7 @@ class _MenuIndikatorState extends State<MenuIndikator> {
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(
                       child: (Text(
-                        'KOMPETENSI DASAR',
+                        'KOMPETENSI DASAR / INDIKATOR',
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),

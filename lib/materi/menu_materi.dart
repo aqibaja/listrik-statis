@@ -40,17 +40,17 @@ class _MenuMateriState extends State<MenuMateri> {
             ),
             SizedBox(height: 20),
             Menu1(
-              title: "Beda Potensial dan Energi Listrik",
+              title: "Beda Potensial dan Energi",
               url: const Beda(),
             ),
             SizedBox(height: 20),
             Menu1(
-              title: "Kelistrikan Pada Sistem Saraf",
+              title: "Kelistrikan Pada Sel Saraf",
               url: const Kelistrikan(),
             ),
             SizedBox(height: 20),
             Menu1(
-              title: "Hewan Yang Mengandung Listrik",
+              title: "Hewan Penghantar Listrik",
               url: const Hewan(),
             ),
           ]),

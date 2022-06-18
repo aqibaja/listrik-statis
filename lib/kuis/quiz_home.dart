@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:listrik_statis/kuis/quiz_view.dart';
 import 'package:page_indicator/page_indicator.dart';
@@ -218,7 +216,6 @@ class _CarouselState extends State<Carousel>
         image: Container(
           child: Image.asset(
             "assets/image/soal5.png",
-            fit: BoxFit.fill,
           ),
         ),
         showCorrect: true,

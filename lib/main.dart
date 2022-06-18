@@ -75,7 +75,7 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
           Container(
             child: Text(
-              'salsabila',
+              'Salsabilla Afifah Khansa',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
