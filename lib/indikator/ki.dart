@@ -9,7 +9,7 @@ class Ki extends StatefulWidget {
 }
 
 const htmlData = r"""
-<img alt="" class="aligncenter size-full wp-image-1414041" height="300" src="asset:assets/doc/images/a1.png"/><img alt="" class="aligncenter size-full wp-image-1414041" height="300" src="asset:assets/doc/images/a2.png"/>
+<img alt="" class="aligncenter size-full wp-image-1414041" height="300" src="asset:assets/doc/images/a1.png"/>
 """;
 
 class _kiState extends State<Ki> {
