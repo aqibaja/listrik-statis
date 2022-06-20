@@ -30,7 +30,10 @@ class _Video1State extends State<Video6> {
     return Scaffold(
       appBar: showAppBar
           ? AppBar(
-              title: Text(' Video Hewan Yang Mengandung Listrik'),
+              title: Text(
+                ' Video Hewan Yang Mengandung Listrik',
+                style: TextStyle(fontSize: 18),
+              ),
               backgroundColor: const Color.fromARGB(255, 57, 142, 153),
             )
           : null,

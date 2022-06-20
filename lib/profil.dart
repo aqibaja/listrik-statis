@@ -47,13 +47,18 @@ class _ProfilState extends State<Profil> {
               ),
             ),
             Container(
-              child: Text(
-                ' Nama : Salsabilla Afifah Khansa',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    fontFamily: 'RobotoMono'),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 25.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    ' Nama : Salsabilla Afifah Khansa',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        fontFamily: 'RobotoMono'),
+                  ),
+                ),
               ),
             ),
             Container(
@@ -72,12 +77,18 @@ class _ProfilState extends State<Profil> {
               ),
             ),
             Container(
-              child: Text(
-                'Tempat, Tanggal Lahir	: Jakarta, 26 Desember 2000',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    fontFamily: 'RobotoMono'),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 25.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Tempat, Tanggal Lahir	: Jakarta, 26 Desember 2000',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        fontFamily: 'RobotoMono'),
+                  ),
+                ),
               ),
             ),
             Container(
@@ -96,13 +107,19 @@ class _ProfilState extends State<Profil> {
               ),
             ),
             Container(
-              child: Text(
-                'NIM	: 180204030',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    fontFamily: 'RobotoMono'),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 25.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'NIM	: 180204030',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        fontFamily: 'RobotoMono'),
+                  ),
+                ),
               ),
             ),
             Container(
@@ -121,12 +138,18 @@ class _ProfilState extends State<Profil> {
               ),
             ),
             Container(
-              child: Text(
-                ' Program Studi	: Pendidikan Fisika',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    fontFamily: 'RobotoMono'),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 25.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    ' Program Studi	: Pendidikan Fisika',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        fontFamily: 'RobotoMono'),
+                  ),
+                ),
               ),
             ),
             Container(
@@ -145,12 +168,18 @@ class _ProfilState extends State<Profil> {
               ),
             ),
             Container(
-              child: Text(
-                ' Fakultas	: Tarbiyah dan Keguruan',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    fontFamily: 'RobotoMono'),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 25.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    ' Fakultas	: Tarbiyah dan Keguruan',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        fontFamily: 'RobotoMono'),
+                  ),
+                ),
               ),
             ),
             Container(
@@ -169,13 +198,19 @@ class _ProfilState extends State<Profil> {
               ),
             ),
             Container(
-              child: Text(
-                ' Universitas	: UIN Ar-Raniry Banda Aceh',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    fontFamily: 'RobotoMono'),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 25.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    ' Universitas	: UIN Ar-Raniry Banda Aceh',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        fontFamily: 'RobotoMono'),
+                  ),
+                ),
               ),
             ),
             Container(

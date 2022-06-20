@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class Video4 extends StatefulWidget {
@@ -30,7 +31,10 @@ class _Video4State extends State<Video4> {
     return Scaffold(
       appBar: showAppBar
           ? AppBar(
-              title: Text('Video Beda Potensial dan Energi Listrik'),
+              title: Text(
+                'Video Beda Potensial dan Energi Listrik',
+                style: TextStyle(fontSize: 18),
+              ),
               backgroundColor: const Color.fromARGB(255, 57, 142, 153),
             )
           : null,
