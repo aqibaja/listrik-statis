@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:listrik_statis/VirtualLab/hukum_coulumb_lab.dart';
+import 'package:listrik_statis/VirtualLab/lkpd.dart';
 import 'package:listrik_statis/VirtualLab/medan_listrik_lab.dart';
 import 'package:listrik_statis/VirtualLab/muatan_listrik_lab.dart';
 import 'package:listrik_statis/video/video2.dart';
@@ -22,7 +23,12 @@ class _MenuVirtualState extends State<MenuVirtual> {
         ),
         body: Container(
           child: Column(children: [
-            SizedBox(height: 200),
+            SizedBox(height: 160),
+            Menu1(
+              title: "LKPD",
+              url: const Lkpd(),
+            ),
+            SizedBox(height: 20),
             Menu1(
               title: "Muatan Listrik",
               url: const MuatanListrikLab(),
