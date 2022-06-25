@@ -3,6 +3,7 @@ import 'package:listrik_statis/materi/beda.dart';
 import 'package:listrik_statis/materi/hewan.dart';
 import 'package:listrik_statis/materi/hk.dart';
 import 'package:listrik_statis/materi/kelistrikan.dart';
+import 'package:listrik_statis/materi/lkpd.dart';
 import 'package:listrik_statis/materi/medan_listrik.dart';
 import 'package:listrik_statis/materi/muatan_listrik.dart';
 
@@ -23,7 +24,12 @@ class _MenuMateriState extends State<MenuMateri> {
         ),
         body: Container(
           child: Column(children: [
-            SizedBox(height: 60),
+            SizedBox(height: 30),
+            Menu1(
+              title: "LKPD",
+              url: const Lkpd(),
+            ),
+            SizedBox(height: 20),
             Menu1(
               title: "Muatan Listrik",
               url: const MuatanListrik(),

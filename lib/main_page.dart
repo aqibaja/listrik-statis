@@ -92,7 +92,7 @@ class _MainPageState extends State<MainPage> {
                         marginHight: marginHeight,
                         isPortrait: isPortrait,
                         image: "assets/image/gambar5.png",
-                        title: "VirtualLab",
+                        title: "LKPD Berbasis Virtual Lab",
                         url: const MenuVirtual(),
                       ),
                     ],
@@ -206,6 +206,7 @@ class Menu extends StatelessWidget {
                         Flexible(
                           child: Text(
                             title,
+                            textAlign: TextAlign.center,
                             style: const TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
