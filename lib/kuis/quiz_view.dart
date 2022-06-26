@@ -180,8 +180,8 @@ class _QuizViewState extends State<QuizView> {
                 style: TextStyle(
                     color: widget.answerColor,
                     fontSize: widget.width > widget.height
-                        ? widget.width / 25
-                        : widget.height / 25),
+                        ? widget.width / 35
+                        : widget.height / 35),
               ),
             ),
             onPressed: () {
@@ -220,8 +220,8 @@ class _QuizViewState extends State<QuizView> {
                 style: TextStyle(
                     color: widget.answerColor,
                     fontSize: widget.width > widget.height
-                        ? widget.width / 25
-                        : widget.height / 25),
+                        ? widget.width / 35
+                        : widget.height / 35),
               ),
             ),
             onPressed: () {
@@ -413,7 +413,7 @@ class _QuizViewState extends State<QuizView> {
                                             child: Container(
                                               decoration: BoxDecoration(
                                                   borderRadius:
-                                                      BorderRadius.circular(15),
+                                                      BorderRadius.circular(10),
                                                   color: Color.fromARGB(
                                                       255, 199, 232, 32)),
                                               height: 60,
