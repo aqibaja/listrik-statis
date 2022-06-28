@@ -26,7 +26,7 @@ class _MainPageState extends State<MainPage> {
         body: Center(
           child: SingleChildScrollView(
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.bottomLeft,
                       end: Alignment.topRight,
