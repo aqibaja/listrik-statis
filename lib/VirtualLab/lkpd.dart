@@ -18,7 +18,7 @@ class _LkpdState extends State<Lkpd> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('LKPD'),
+        title: Text('LKPD Medan Listrik'),
         backgroundColor: const Color.fromARGB(255, 57, 142, 153),
       ),
       body: WebView(
