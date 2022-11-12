@@ -9,9 +9,7 @@ class Video6 extends StatefulWidget {
 }
 
 class _Video1State extends State<Video6> {
-  final List<String> _videoUrlList = [
-    'https://youtube.com/watch?v=7B7xURqi_pc',
-  ];
+  final List<String> _videoUrlList = ['https://youtu.be/j8sqQQOxRJE'];
 
   bool showAppBar = true;
 

@@ -70,6 +70,10 @@ flutter_svg
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.23.0+1/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.23.0+1/lib/
+get
+2.15
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/get-4.6.5/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/get-4.6.5/lib/
 html
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/html-0.15.0/
@@ -166,6 +170,10 @@ test_api
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8/lib/
+trotter
+2.7
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/trotter-1.2.0/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/trotter-1.2.0/lib/
 tuple
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/tuple-2.0.0/
